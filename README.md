@@ -15,4 +15,3 @@
 # FOR EASIER VIEW:
 
 [Easier view on CodeSandbox](https://codesandbox.io/s/charming-liskov-7pklwl?file=/src/index.tsx)
-# nintendo_0923

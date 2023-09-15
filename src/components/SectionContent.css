@@ -1,0 +1,85 @@
+.heading-container {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.section-img-container {
+  border-radius: 25px;
+  height: 44%;
+  min-height: 200px;
+  background-color: var(--placeholder);
+}
+
+.section-img-container,
+.title-container,
+.description-container {
+  width: 52%;
+  min-width: 250px;
+}
+
+.section-date-span {
+  padding: 0.75rem 0 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.title-container > span {
+  inline-size: auto;
+  overflow-wrap: break-word;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.description-container > p {
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+
+.link-container {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.link-container > a {
+  font-weight: bold;
+  color: var(--link);
+  font-size: 0.8em;
+}
+
+.section-button-container {
+  display: flex;
+  width: 60%;
+  min-width: 275px;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.section__button-filled,
+.section__button-outline {
+  width: 45%;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: none;
+  inset: none;
+  text-align: center;
+  line-height: 1;
+  border: 0;
+  cursor: pointer;
+}
+
+.section__button-filled {
+  background-color: var(--button__dark);
+  border: 1.5px solid var(--button__dark);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.section__button-outline {
+  background-color: var(--white);
+  border: 1.5px solid var(--button__dark);
+  color: var(--button__dark);
+  font-family: Arial, Helvetica, sans-serif;
+}
