@@ -36,11 +36,11 @@ function InnerLayout() {
     // depends on what content is named in database, however will go with these defaults. Can change as necessary
     const [content, setContent] = (0, react_1.useState)({
         heading: '',
-        image: '',
+        imageUrl: '',
         date: '',
         title: '',
         description: '.',
-        link: '',
+        link: { text: '', url: '' },
         buttonSpan1: '',
         buttonSpan2: '',
     });
@@ -52,8 +52,7 @@ function InnerLayout() {
         fetchMockDataAsync();
     }, []);
     return (react_1.default.createElement("div", { className: "inner-layout-container" },
-        react_1.default.createElement("div", { className: "inner-layout-content" },
-            react_1.default.createElement(SectionContent_1.default, { ...content }))));
+        react_1.default.createElement("div", { className: "inner-layout-content" }, content ? react_1.default.createElement(SectionContent_1.default, { ...content }) : react_1.default.createElement("h2", null, " Loading..."))));
 }
 exports.default = InnerLayout;
 //# sourceMappingURL=InnerLayout.js.map

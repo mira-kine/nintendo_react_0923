@@ -1,10 +1,12 @@
 import React from 'react';
 import './SectionContent.css';
-import { ContentProps } from 'src/services/content';
+import { Content } from 'src/services/content';
+
+type ContentProps = Content;
 
 export default function SectionContent({
   heading,
-  image,
+  imageUrl,
   date,
   title,
   description,
@@ -17,7 +19,7 @@ export default function SectionContent({
       <div className="heading-container">
         <h2 className="heading-text">{heading}</h2>
       </div>
-      <div className="section-img-container">{image}</div>
+      <div className="section-img-container">{imageUrl}</div>
       <div className="section-date-span">
         <span>{date}</span>
       </div>
@@ -28,7 +30,7 @@ export default function SectionContent({
         <p>{description}</p>
       </div>
       <div className="link-container">
-        <a href="#">{link}</a>
+        <a href="#">{link?.text}</a>
       </div>
       <div className="section-button-container">
         <button className="section__button-filled">

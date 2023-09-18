@@ -22,23 +22,11 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 require("./SectionNavBar.css");
-const navitems_1 = __importDefault(require("src/services/navitems"));
-function NavBar() {
+function NavBar({ navItems, setNavItems }) {
     const [showNav, setShowNav] = (0, react_1.useState)(false);
-    const [navItems, setNavItems] = (0, react_1.useState)([]);
-    (0, react_1.useEffect)(() => {
-        const fetchMockDataAsync = async () => {
-            const response = await (0, navitems_1.default)();
-            setNavItems(response);
-        };
-        fetchMockDataAsync();
-    }, []);
     const handleNavItemClick = (selectedItem) => {
         setNavItems((prevItems) => prevItems.map((item) => item.title === selectedItem.title
             ? { ...item, selected: true }

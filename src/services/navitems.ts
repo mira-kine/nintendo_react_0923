@@ -6,11 +6,9 @@ export interface NavItem {
 }
 // skeleton navItems hardcoded as mock data
 
-export type NavItemListProps = NavItem[];
-
 const fetchMockNavData = async (): Promise<any> => {
   try {
-    const navItems: NavItemListProps = [
+    const navItems: NavItem[] = [
       {
         title: 'Section 1',
         href: '/section1',

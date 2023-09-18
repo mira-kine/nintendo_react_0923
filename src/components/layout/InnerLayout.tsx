@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './InnerLayout.css';
 import SectionContent from '../SectionContent';
 import fetchMockContentData from 'src/services/content';
-import type { ContentProps } from 'src/services/content';
+import type { Content } from 'src/services/content';
 
 export default function InnerLayout() {
   // receive any data to show content of according to params
   // assuming receiving data information from exterior database
   // depends on what content is named in database, however will go with these defaults. Can change as necessary
-  const [content, setContent] = useState<ContentProps>({
+  const [content, setContent] = useState<Content | undefined>({
     heading: '',
-    image: '',
+    imageUrl: '',
     date: '',
     title: '',
     description: '.',
-    link: '',
+    link: { text: '', url: '' },
     buttonSpan1: '',
     buttonSpan2: '',
   });
@@ -30,7 +30,7 @@ export default function InnerLayout() {
   return (
     <div className="inner-layout-container">
       <div className="inner-layout-content">
-        <SectionContent {...content} />
+        {content ? <SectionContent {...content} /> : <h2> Loading...</h2>}
       </div>
     </div>
   );

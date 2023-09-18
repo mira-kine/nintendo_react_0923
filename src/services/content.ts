@@ -1,10 +1,10 @@
-export interface ContentProps {
+export interface Content {
   heading: string;
-  image: string | null;
+  imageUrl?: string;
   date: string;
   title: string;
   description: string;
-  link: string | null;
+  link?: { text: string; url: string };
   buttonSpan1: string;
   buttonSpan2: string;
 }
@@ -13,15 +13,15 @@ export interface ContentProps {
 // hardcoding mock data for now
 const fetchMockContentData = async (): Promise<any> => {
   try {
-    const content: ContentProps = {
+    const content: Content = {
       heading: 'Heading text here',
-      image: '',
+      imageUrl: '',
       date: '5/01/22',
       title:
         'Title copy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
       description:
         'Article copy lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna lorem ipsum...',
-      link: 'Read more',
+      link: { text: 'Read more', url: '#' },
       buttonSpan1: 'Button',
       buttonSpan2: 'Button',
     };

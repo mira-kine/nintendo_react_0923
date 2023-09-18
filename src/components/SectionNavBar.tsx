@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './SectionNavBar.css';
-import type { NavItemListProps, NavItem } from 'src/services/navitems';
-import fetchMockNavData from 'src/services/navitems';
+import type { NavItem } from 'src/services/navitems';
+import { NavItemProps } from 'src/App';
 
-export default function NavBar() {
+export default function NavBar({ navItems, setNavItems }: NavItemProps) {
   const [showNav, setShowNav] = useState(false);
-  const [navItems, setNavItems] = useState<NavItemListProps>([]);
-
-  useEffect(() => {
-    const fetchMockDataAsync = async () => {
-      const response = await fetchMockNavData();
-      setNavItems(response);
-    };
-    fetchMockDataAsync();
-  }, []);
 
   const handleNavItemClick = (selectedItem: NavItem) => {
     setNavItems((prevItems) =>

@@ -7,9 +7,9 @@ const react_1 = __importDefault(require("react"));
 const SectionNavBar_1 = __importDefault(require("../SectionNavBar"));
 require("./OuterLayout.css");
 const InnerLayout_1 = __importDefault(require("./InnerLayout"));
-function OuterLayout() {
+function OuterLayout({ navItems, setNavItems }) {
     return (react_1.default.createElement("div", { className: "outer-layout-container" },
-        react_1.default.createElement(SectionNavBar_1.default, null),
+        react_1.default.createElement(SectionNavBar_1.default, { navItems: navItems, setNavItems: setNavItems }),
         react_1.default.createElement(InnerLayout_1.default, null)));
 }
 exports.default = OuterLayout;

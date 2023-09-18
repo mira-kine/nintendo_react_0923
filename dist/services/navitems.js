@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// skeleton navItems hardcoded as mock data
 const fetchMockNavData = async () => {
     try {
         const navItems = [

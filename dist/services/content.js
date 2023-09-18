@@ -6,11 +6,11 @@ const fetchMockContentData = async () => {
     try {
         const content = {
             heading: 'Heading text here',
-            image: '',
+            imageUrl: '',
             date: '5/01/22',
             title: 'Title copy lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt',
             description: 'Article copy lorem ipsum dolor consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna lorem ipsum...',
-            link: 'Read more',
+            link: { text: 'Read more', url: '#' },
             buttonSpan1: 'Button',
             buttonSpan2: 'Button',
         };
